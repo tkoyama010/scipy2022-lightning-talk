@@ -1,54 +1,109 @@
-# Configuration file for the Sphinx documentation builder.
-#
-# This file only contains a selection of the most common options. For a full
-# list see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
+# -*- coding: utf-8 -*-
 
 # -- Path setup --------------------------------------------------------------
-
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
-
+import os
 
 # -- Project information -----------------------------------------------------
-
-project = "scipy2022-lightning-talk"
-copyright = "2022, Tetsuo Koyama"
-author = "Tetsuo Koyama"
-
-# The full version, including alpha/beta/rc tags
-release = "0.1"
-
+project = "sphinx-revealjs"
+copyright = "2018, Kazuya Takei"
+author = "Kazuya Takei"
+version = ""
+release = "2018.10"
 
 # -- General configuration ---------------------------------------------------
-
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
-extensions = ["sphinx_revealjs"]
-
-# Add any paths that contain templates here, relative to this directory.
+extensions = [
+    "sphinx.ext.mathjax",
+    "sphinx.ext.todo",
+    "sphinx_revealjs",
+    "sphinxcontrib.budoux",
+    "sphinxcontrib.gtagjs",
+    "sphinxcontrib.oembed",
+]
 templates_path = ["_templates"]
-
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
-
+source_suffix = ".rst"
+master_doc = "index"
+language = "en"
+locale_dirs = ["_locales"]
+exclude_patterns = [".venv", "_build", "Thumbs.db", ".DS_Store", "_sections"]
+pygments_style = None
 
 # -- Options for HTML output -------------------------------------------------
-
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
 html_theme = "alabaster"
-
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
+html_theme_options = {
+    "revealjs_theme": "league",
+}
 html_static_path = ["_static"]
+
+# -- Options for Reveal.js output ---------------------------------------------
+revealjs_static_path = ["_static"]
+revealjs_style_theme = "moon"
+revealjs_script_conf = {
+    "controls": True,
+    "progress": True,
+    "center": True,
+    "transition": "slide",
+}
+revealjs_script_plugins = [
+    {
+        "name": "RevealNotes",
+        "src": "revealjs4/plugin/notes/notes.js",
+    },
+    {
+        "name": "RevealHighlight",
+        "src": "revealjs4/plugin/highlight/highlight.js",
+    },
+    {
+        "name": "RevealMath",
+        "src": "revealjs4/plugin/math/math.js",
+    },
+]
+revealjs_css_files = [
+    "revealjs4/plugin/highlight/zenburn.css",
+    "custom.css",
+]
+revealjs_notes_from_comments = True
+
+# -- Options for HTMLHelp output ---------------------------------------------
+htmlhelp_basename = "sphinx-revealjsdoc"
+
+# -- Options for LaTeX output ------------------------------------------------
+latex_elements = {}
+latex_documents = [
+    (
+        master_doc,
+        "sphinx-revealjs.tex",
+        "sphinx-revealjs Documentation",
+        "Kazuya Takei",
+        "manual",
+    ),
+]
+
+# -- Options for manual page output ------------------------------------------
+man_pages = [
+    (master_doc, "sphinx-revealjs", "sphinx-revealjs Documentation", [author], 1)
+]
+
+# -- Options for Texinfo output ----------------------------------------------
+texinfo_documents = [
+    (
+        master_doc,
+        "sphinx-revealjs",
+        "sphinx-revealjs Documentation",
+        author,
+        "sphinx-revealjs",
+        "One line description of project.",
+        "Miscellaneous",
+    ),
+]
+
+# -- Options for Epub output -------------------------------------------------
+epub_title = project
+epub_exclude_files = ["search.html"]
+
+# -- Options for extensions --------------------------------------------------
+todo_include_todos = True
+
+if "GTAGJS_IDS" in os.environ:
+    gtagjs_ids = os.environ["GTAGJS_IDS"].split(",")
+
+budoux_targets = ["h1", "h2", "h3"]

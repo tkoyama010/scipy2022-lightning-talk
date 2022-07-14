@@ -1,1 +1,5 @@
-sphinx-revealjs==2.0.0
+--find-links=https://github.com/attakei-lab/sphinxcontrib-oembed/releases
+sphinx-revealjs
+sphinxcontrib-gtagjs
+sphinxcontrib-budoux
+sphinxcontrib-oembed
