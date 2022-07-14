@@ -1,45 +1,51 @@
 :orphan:
 
-===============================
-Introduction of sphinx-revealjs
-===============================
-
-:Based version: 2.0.0
-:Demo updated: 2022-06-03
-
-Overview
-========
-
-What is this?
--------------
-
-Sphinx extension to build Reveal.js presentation
-
-Features
---------
-
-.. This is reST comment. At default, does not write.
-
-* Convert sections from reStructuredText directly
-* Support customize sections
-* Support using plugins
-* Support Sphinx extensions
-* Select theme from default themes
-
-.. include:: _sections/standard-usage.rst
-.. include:: _sections/rst-to-revealjs.rst
-.. include:: _sections/customize-section.rst
-.. include:: _sections/interactive-content.rst
-.. include:: _sections/using-plugins.rst
-
-Enjoy writing reST as presentation
+==================================
+Interactive 3D data in your slide!
 ==================================
 
-Please star!
+:Based version: 0.0.1
+:Date: 2022-07-14
 
-.. raw:: html
+Who is `@tkoyama010 <https://github.com/tkoyama010>`_ ? |:handshake:|
+=====================================================================
 
-    <!-- Place this tag where you want the button to render. -->
-    <a class="github-button" href="https://github.com/attakei/sphinx-revealjs" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star attakei/sphinx-revealjs on GitHub">Star</a>
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+- Chairperson of Sphinx Japanese |:flag_jp:| user group.
+- Lover of making slides by revealjs.
+- 3D visualizaion tool PyVista community member.
+
+`Sphinx <https://www.sphinx-doc.org/en/master/#>`_ |:question:|
+===============================================================
+
+- Beautiful documentation generator which is used in Python community.
+- Thanks `@tk0miya <https://github.com/tk0miya>`_ for maintaining sphinx.
+
+`revealjs <https://revealjs.com/>`_ |:question:|
+================================================
+
+- Create Stunning Presentations on the Web.
+
+Sphinx |:heart:| revealjs = `sphinx-revealjs <https://sphinx-revealjs.readthedocs.io/en/latest/>`_
+==================================================================================================
+
+- `sphinx-revealjs` is Sphinx extension to generate Reveal.js presentation documents from standard reStructuredText.
+- Demo is `here <https://attakei.github.io/sphinx-revealjs/index.html>`_ .
+- This slide is powered by Sphinx |:heart:| revealjs = `sphinx-revealjs <https://sphinx-revealjs.readthedocs.io/en/latest/>`_ .
+- Thanks `@attakei <https://github.com/attakei>`_ for making this.
+
+More |:question:|
+=================
+
+`PyVista <https://docs.pyvista.org/index.html>`_ |:question:|
+=============================================================
+
+- 3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK)
+
+`PyVista <https://docs.pyvista.org/index.html>`_ |:question:|
+=============================================================
+
+.. .. jupyter-execute::
+.. 
+..    from pyvista import demos
+..    demos.plot_logo(background='white', jupyter_backend='panel')
+
