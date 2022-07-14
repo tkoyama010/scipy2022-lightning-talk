@@ -1,8 +1,8 @@
 :orphan:
 
-==================================
-Interactive 3D data in your slide!
-==================================
+==========================
+3D plotting in your slide!
+==========================
 
 :Based version: 0.0.1
 :Date: 2022-07-14
@@ -36,16 +36,15 @@ Sphinx |:heart:| revealjs = `sphinx-revealjs <https://sphinx-revealjs.readthedoc
 More |:question:|
 =================
 
-`PyVista <https://docs.pyvista.org/index.html>`_ |:question:|
-=============================================================
+`PyVista <https://docs.pyvista.org/index.html>`_ 
+=================================================
 
 - 3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK)
 
 `PyVista <https://docs.pyvista.org/index.html>`_ |:question:|
 =============================================================
 
-.. .. jupyter-execute::
-.. 
-..    from pyvista import examples
-..    dataset = examples.download_urn()
-..    dataset.plot(color='tan', jupyter_backend='pythreejs', window_size=(700, 400))
+.. literalinclude:: plot.py
+
+.. image:: notch_stress.png
+   :width: 600

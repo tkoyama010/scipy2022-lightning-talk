@@ -14,6 +14,7 @@ help:
 .PHONY: help Makefile revealjs
 
 revealjs:
+	python plot.py
 	@$(SPHINXBUILD) -M revealjs "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) -D language="ja"
 	mv $(BUILDDIR)/revealjs/main.html $(BUILDDIR)/revealjs/main-ja.html
 	@$(SPHINXBUILD) -M revealjs "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
