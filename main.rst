@@ -46,6 +46,6 @@ More |:question:|
 
 .. .. jupyter-execute::
 .. 
-..    from pyvista import demos
-..    demos.plot_logo(background='white', jupyter_backend='panel')
-
+..    from pyvista import examples
+..    dataset = examples.download_urn()
+..    dataset.plot(color='tan', jupyter_backend='pythreejs', window_size=(700, 400))
